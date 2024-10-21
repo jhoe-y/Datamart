@@ -1,0 +1,11 @@
+ID_Producto,Nombre_Producto,Categoria,Precio
+1,Manzana,Frutas,0.50
+2,Banana,Frutas,0.30
+3,Zanahoria,Vegetales,0.25
+4,Leche,Lácteos,1.20
+5,Huevo,Lácteos,0.10
+6,Pechuga de Pollo,Carnes,5.00
+7,Pasta,Granos,1.00
+8,Riso,Granos,0.75
+9,Pan,Panadería,1.50
+10,Chocolate,Confitería,2.00
