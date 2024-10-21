@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#inventory-table th, #inventory-table td {
+    border: 1px solid #161515; 
+    padding: 12px;
+    text-align: left;
+}
+
+#inventory-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#inventory-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#inventory-table tr:hover {
+    background-color: #ddd;
+}

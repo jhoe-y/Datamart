@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Inventario del Supermercado</title>
+</head>
+<body>
+    <h1>Inventario del Supermercado</h1>
+    <table id="inventory-table">
+        <thead>
+            <tr>
+                <th>Nombre del Producto</th>
+                <th>Tienda</th>
+                <th>Fecha</th>
+                <th>Categoría</th>
+                <th>Cantidad Disponible</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        async function fetchInventory() {
+            try {
+                const response = await fetch('/api/inventory')
+                const data = await response.json()
+
+                const tableBody = document.getElementById('inventory-table').getElementsByTagName('tbody')[0]
+
+                tableBody.innerHTML = ''
+
+                data.forEach(item => {
+                    const row = tableBody.insertRow()
+                    row.insertCell(0).textContent = item.nombre_producto
+                    row.insertCell(1).textContent = item.nombre_tienda
+                    row.insertCell(2).textContent = item.fecha_completa
+                    row.insertCell(3).textContent = item.nombre_categoria
+                    row.insertCell(4).textContent = item.cantidad_disponible
+                })
+            } catch (error) {
+                console.error('Error al obtener los datos:', error)
+            }
+        }
+
+        window.onload = fetchInventory
+    </script>
+</body>
+</html>
