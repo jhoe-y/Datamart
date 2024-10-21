@@ -2,7 +2,7 @@
 import sqlite3
 import os
 
-DB_PATH = 'datamart/datamart_inventario.db'  # Asegúrate de que la ruta sea correcta
+DB_PATH = 'datamart/datamart_inventario.db'
 
 def cargar_datos_producto(df):
     conn = sqlite3.connect(DB_PATH)
